@@ -1,0 +1,33 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      
+      int rows=5; // Number of rows for the reverse triangle
+
+    // Loop for each row
+    for (int i = rows; i >= 1; i--) {
+        // Print leading spaces
+        for (int k = i; k < rows; k++) {
+            System.out.print(" ");
+        }
+
+        // Print stars
+        for (int k = 1; k <= i; k++) {
+            System.out.print("* ");
+        }
+
+        // Move to the next line after printing stars
+        System.out.println("");
+    }
+      
+        
+  
+       
+      
+         
+         
+        }
+        
+      
+  }
