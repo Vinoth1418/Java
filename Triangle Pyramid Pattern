@@ -1,0 +1,23 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      
+      int rows=5; // Number of rows for the reverse triangle
+
+    for(int i=rows;i>=1;i--){
+      for(int j=1;j<i;j++){
+        System.out.print(" ");
+      }
+      for(int k=0;k<=rows-i;k++){
+        System.out.print("* ");
+        
+      }
+      System.out.println("");
+    }
+    
+      
+        }
+        
+      
+  }
