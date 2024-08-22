@@ -1,0 +1,16 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      String a="Computer";
+      String b=a;
+      String rev="";
+      int len=a.length();
+      for(int i=len-1;i>=0;i--){
+        rev=rev+a.charAt(i);
+      }
+      if(rev.equals(b))
+      System. out. println(a+ " is Palindrome String ");
+      else
+      System. out. println(a+ " is not a Palindrome String");
+    }}
