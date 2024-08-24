@@ -1,0 +1,13 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+     int a[]={14,42,7,56,70};
+     int search =7;
+     for(int i=0;i<a.length;i++){
+       if(a[i]==search){
+         System. out. println("Element found at the index of:"+i);
+         }
+     }
+     
+  }}
