@@ -1,0 +1,14 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+     StringBuffer a=new StringBuffer();
+     System. out. println(a.capacity());
+     a.append("Vino");
+     a.append("Ms");
+     a.insert(0,"R");
+     a.replace(4,6,"Vin");
+     a.capacity();
+     System. out. println(a);
+  }
+}
