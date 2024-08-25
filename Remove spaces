@@ -1,0 +1,8 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      String a="J a v a D eve l oper";
+      String b=a.replaceAll("\\s","");
+      System.out.println(b);
+    }}
