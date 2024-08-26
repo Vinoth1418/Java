@@ -1,0 +1,14 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      String a="VinoVVVVV";
+      HashSet<Character>b=new HashSet<>();
+      for(int i=0;i<a.length();i++){
+        b.add(a.charAt(i));
+      }
+      for(char c:b){
+      }
+        System.out.println(b);
+      }
+}
