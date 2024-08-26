@@ -1,0 +1,43 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      int num[][]=new int[3][4];
+      int b[][]=new int[3][4];
+      int c[][]=new int[3][4];
+      int value=1;
+      int value2=1;
+      System. out. println("Matrix:1");
+      for(int i=0;i<3;i++){
+        for(int j=0;j<4;j++){
+          num[i][j]=value;
+          value++;
+          System.out.print(num[i][j]+" ");
+          
+        }
+        System. out. println();
+        
+      }
+      System. out. println("Matrix:2");
+        for(int i=0;i<3;i++){
+        for(int j=0;j<4;j++){
+          b[i][j]=value2;
+          value2++;
+          System.out.print(b[i][j]+" ");
+          
+        }
+        System. out. println();
+        
+      }
+      System. out. println("Addition of two matrices:");
+      for(int i=0;i<3;i++){
+        for(int j=0;j<4;j++){
+          c[i][j]=num[i][j]+b[i][j];
+          System.out.print(c[i][j]+" ");
+          
+        }
+        System. out. println();
+        
+      }}
+    }
+    
