@@ -1,0 +1,17 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+    String a="Vino Vino";
+    String c="Ms.V";
+    String b[]=a.split("\\s");
+    String e[]=c.split("\\.");
+    for(String d:b){
+     System.out.println(d);
+    }
+    for(String f:e){
+      System.out.println(f);
+    }
+    }
+}
+    
