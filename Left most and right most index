@@ -1,0 +1,21 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      int a[]={1,3,5,5,5,5,67,123,125};
+      int b=a.length;
+      int c=5;
+      for(int i=0;i<b;i++){
+        if(a[i]==c){
+          System. out. println("Index of first occurence of "+c+ " is:"+i);
+          break;
+        }
+      }
+      for(int j=b-1;j>0;j--){
+        if(a[j]==c){
+        System. out. println("Index of last occurrence of " +c+ " is:"+j);
+        break;
+      }
+}
+}
+}
