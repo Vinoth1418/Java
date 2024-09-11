@@ -1,0 +1,31 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      int a[][]={{1,2,3,4,5},
+                 {6,7,8,9,10},
+                 {11,12,13,14,15},
+                 {16,17,18,19,20}};
+        int row=0;
+        int rowend=a.length;
+        int col=0;
+        int colend=a[0].length;
+        while(row<rowend&&col<colend){
+          for(int i=col;i<colend;i++)
+            System.out.print(a[row][i]+" ");
+            row+=1;
+            for(int j=row;j<rowend;j++)
+              System.out.print(a[j][colend-1]+" ");
+              colend-=1;
+              for(int k=colend-1;k>=col;k--)
+                System.out.print(a[rowend-1][k]+" ");
+                rowend-=1;
+                for(int l=rowend-1;l>row;l--){
+                  System.out.print(a[l][col]+" ");
+                  col+=1;
+                }
+                
+              }
+  
+}
+}
