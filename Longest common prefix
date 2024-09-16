@@ -1,0 +1,17 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      String a[]={"Flower","Flight","Flow"};
+      Arrays.sort(a);
+      System.out.println(Arrays.toString(a));
+      String first=a[0];
+      String second=a[a.length-1];
+      int minlength=Math.min(first.length(),second.length());
+      int i=0;
+      while(i<minlength&&first.charAt(i)==second.charAt(i)){
+        i++;}
+        System.out.print("The longest common prefix is:"+first.substring(0,i));
+      
+  
+}}
