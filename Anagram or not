@@ -1,0 +1,18 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+    String a="vino";
+    String b="novi";
+    char c[]=a.toCharArray();
+    Arrays.sort(c);
+    char d[]=b.toCharArray();
+    Arrays.sort(d);
+    System.out.println(d);
+    System.out.println(c);
+    if(Arrays.equals(c,d)){
+      System.out.println("Anagram");}
+      else{
+    System.out.println("Not a anagram");
+  }
+}}
