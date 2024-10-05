@@ -1,0 +1,26 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+     int num=777;
+     if(num<0||num>999){
+     System.out.print("Wrong input");}
+     else{
+      int last=num%10;
+      int s=num/10;
+      int sl=s%10;
+     int f=num/100;
+     String a[]={"","One","Two","Three","Four","Five","Six","Seven",
+            "Eight",   "Nine",      "Ten",      "Eleven",
+            "Twelve",  "Thirteen",  "Fourteen", "Fifteen",
+            "Sixteen", "Seventeen", "Eighteen", "Nineteen"};
+            String b[]={"","","Twenty","Thirty","Forty","Fifty","Sixty","Seventy","Eighty", "Ninety"};
+            String c="Hundred";
+            if(num<20)
+            System.out.print(a[num]);
+            else if(num<100)
+            System.out.print(b[sl]+a[last]);
+            else
+            System.out.print(a[f]+" "+c+" "+b[sl]+" "+a[last]);}
+                          
+}}
