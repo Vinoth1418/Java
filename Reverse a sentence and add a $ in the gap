@@ -1,0 +1,17 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      String a="Game is Over";
+      System.out.println(a);
+      String b[]=a.split(" ");
+      StringBuilder c=new StringBuilder();
+      for(int i=b.length-1;i>=0;i--){
+        c.append(b[i]+"");
+        if(i>0)
+        c.append("$");
+      }
+  
+  System.out.println(c);
+  
+}}
