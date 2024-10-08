@@ -1,0 +1,23 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      String a="java online compiler";
+      String b[]=a.split(" ");
+      String modifiedsentence="";
+      int capitalizecount=0;
+      for(int i=0;i<b.length;i++){
+        String word=b[i];
+        if(word.length()>0){
+        String modifiedword=Character.toUpperCase(word.charAt(0))+word.substring(1);
+        capitalizecount++;
+        if(word.length()>1){
+          modifiedword=modifiedword.substring(0,modifiedword.length()-1)+Character.toUpperCase(word.charAt(word.length()-1));
+          capitalizecount++;
+        }
+        modifiedsentence+=modifiedword+" ";
+        }}
+      System.out.println("Modified sentence:"+modifiedsentence+" ");
+      System.out.println("Capitalizecount:"+capitalizecount);
+  }
+}
