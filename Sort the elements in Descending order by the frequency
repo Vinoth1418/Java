@@ -2,7 +2,7 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-      int a[]={5,9,2,5,8,2,1,2,5,8,1,2};
+      int a[]={5,9,7,5,8,7,1,7,5,8,1,7};
       int b[][]=new int[a.length][2];
       boolean counted[]=new boolean[a.length];
       int index=0;
