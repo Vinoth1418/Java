@@ -1,0 +1,17 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      String a="aabbbcc";
+      char b[]=a.toCharArray();
+      Set<Character>c=new LinkedHashSet<>();
+      for(int i=0;i<b.length;i++){
+        c.add(b[i]);
+      }
+      StringBuilder d=new StringBuilder();
+      for(char e:c){
+        d.append(e);}
+        System.out.println(d);
+      
+  }
+}
