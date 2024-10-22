@@ -1,0 +1,16 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      int a[]={2,3,-8,7,-1,2,3};
+      int res=a[0];
+      for(int i=0;i<a.length;i++){
+        int currsum=0;
+        for(int j=i;j<a.length;j++){
+          currsum=currsum+a[j];
+          res=Math.max(res,currsum);
+        }
+      } 
+      System.out.println(res);
+  }
+}
