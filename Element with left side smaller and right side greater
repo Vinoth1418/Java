@@ -1,0 +1,29 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      int a[]={4,2,5,7};
+      int mid=a.length/2;
+      int midvalue=a[mid];
+      
+        boolean leftside=true;
+        boolean rightside=true;
+        for(int i=0;i<mid;i++){
+        if(a[i]>midvalue){
+          leftside=false;
+          break;
+        }}
+        for(int j=mid+1;j<a.length;j++){
+          if(a[j]<midvalue){
+            rightside=false;
+            break;
+          }}
+        if(leftside&&rightside){
+          System.out.println(midvalue);
+        }
+        else{
+          System.out.println("-1");
+        }
+      
+  
+}}
