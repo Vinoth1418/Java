@@ -1,0 +1,23 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      int a[]={93,84,62,56,74,47};
+      for(int i=0;i<a.length;i++){
+      int colnumber=a[i];
+      StringBuilder b=new StringBuilder();
+      int currnumber=colnumber;
+      while(currnumber>0){
+        int rem=currnumber%26;
+        if(rem==0){
+          b.append("Z");
+          currnumber=(currnumber/26)-1;
+        }
+        else{
+          b.append((char)((rem-1)+'A'));
+          currnumber=currnumber/26;
+        }
+      }
+      System.out.println(colnumber+" is "+b.reverse());
+  }
+}}
