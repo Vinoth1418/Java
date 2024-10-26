@@ -1,0 +1,16 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      int a=10;
+      int b=100;
+      for(int i=1;i*1<b;i++){
+        int square=i*i;
+        if(square>=20){
+          if(square<=100){
+          System.out.print(square+" ");
+        }
+        }
+      }
+  }
+}
