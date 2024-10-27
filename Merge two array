@@ -1,0 +1,19 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      int a[]={1,2,8,6,9};
+      int b[]={2,4,5,10};
+      HashSet<Integer>c=new HashSet<>();
+      for(int i=0;i<a.length;i++){
+        c.add(a[i]);
+      }
+      for(int i=0;i<b.length;i++){
+        c.add(b[i]);
+      }
+      ArrayList<Integer>d=new ArrayList<>(c);
+      Collections.sort(d);
+      System.out.println(d);
+        
+  }
+}
