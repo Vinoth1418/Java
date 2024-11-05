@@ -1,0 +1,15 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      String a="Vinoth";
+      char c[]=a.toCharArray();
+      Stack<Character>b=new Stack<>();
+      for(int i=0;i<c.length;i++){
+        b.push(c[i]);
+      }
+      while(!b.isEmpty()){
+        System.out.print(b.pop());
+      }
+  }
+}
