@@ -1,0 +1,28 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      int a[]={2,5,3,6};
+      ArrayList<Integer>oddnumbers=new ArrayList<>();
+      ArrayList<Integer>evennumbers=new ArrayList<>();
+      for(int i=0;i<a.length;i++){
+        if(a[i]%2==1){
+          oddnumbers.add(a[i]);
+        }
+        else{
+          evennumbers.add(a[i]);
+        }
+      
+      Collections.sort(oddnumbers,Collections.reverseOrder());
+      Collections.sort(evennumbers);
+      }
+      int index=0;
+      for(int i=0;i<oddnumbers.size();i++){
+        a[index++]=oddnumbers.get(i);
+      }
+      for(int j=0;j<evennumbers.size();j++){
+        a[index++]=evennumbers.get(j);
+      }
+      System.out.print(Arrays.toString(a));
+  }
+}
