@@ -1,0 +1,23 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      int a[]={4,8,3,7,5};
+      int low=0;
+      int high=a.length-1;
+      int key=7;
+      Arrays.sort(a);
+      while(low<=high){
+        int mid=low+(high-low)/2;
+        if(a[mid]==key){
+          System.out.println("Element found at index:"+mid);        
+          return;}
+        if(a[mid]<key){
+          low=mid+1;
+      }
+      else{
+      high=mid-1;
+  }
+}
+System.out.println("Element not found");
+}}
