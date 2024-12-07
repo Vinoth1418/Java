@@ -2,14 +2,17 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-      int a[]={4,7,8,4,3,7,2,1};
-       System. out. println("Duplicates elements in the given array:");
-       for(int i=0;i<a.length;i++){
-        for(int j=i+1;j<a.length;j++){
-          if(a[i]==a[j]){
-          System. out. println(a[i]);
-          }
-          }
-      }
-    }
-}
+      int a[]={5,3,9,2,6,1,5,9,5};
+     HashSet<Integer>b=new HashSet<>();
+     for(int i=0;i<a.length;i++){
+       for(int j=i+1;j<a.length;j++){
+         if(a[i]==a[j]){
+           if(!b.contains(a[i])){
+             b.add(a[i]);
+             break;
+           }
+         }
+       }
+     }
+     System.out.print("Dupliactes elements are:"+b);
+    }}
