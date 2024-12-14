@@ -1,0 +1,17 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      int a=7;
+      int stars=a*2-1;
+      for(int i=0;i<a;i++){
+        for(int j=0;j<i;j++){
+          System.out.print(" ");
+        }
+        for(int k=0;k<stars;k++){
+          System.out.print("*");
+        }
+          stars-=2;
+          System.out.println();
+      }
+      }}
