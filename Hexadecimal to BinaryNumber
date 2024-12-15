@@ -1,0 +1,12 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      String hexa="B36";
+      String bin;
+      int dec;
+      dec=Integer.parseInt(hexa,16);
+      bin=Integer.toBinaryString(dec);
+      System.out.println(bin);
+    }
+}
