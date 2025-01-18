@@ -1,0 +1,24 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      int a[]={1,5,3,2};
+      int count=0;
+      for(int i=0;i<a.length;i++){
+        for(int j=i+1;j<a.length;j++){
+          for(int k=j+1;k<a.length;k++){
+          if(a[i]+a[j]==a[k]){
+            count++;
+          }
+          else if(a[i]+a[k]==a[j]){
+            count++;
+          }
+          else if(a[j]+a[k]==a[i]){
+            count++;
+          }
+        }
+      }
+      }
+      System.out.print(count);
+  }
+}
