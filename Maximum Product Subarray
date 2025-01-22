@@ -1,0 +1,15 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      int a[]={-1,-3,-10,0,6};
+      int c=a[0];
+      for(int i=0;i<a.length;i++){
+        int n=1;
+        for(int j=i;j<a.length;j++){
+          n*=a[j];
+          c=Math.max(c,n);
+  }
+      }
+      System.out.println(c);
+    }}
