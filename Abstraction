@@ -1,0 +1,19 @@
+import java.util.*;
+abstract class student{
+  abstract void marks();
+  void id(){
+    System.out.println("59");
+  }
+}
+class marks extends student{
+  void marks(){
+    System.out.println("77");
+  }
+}
+public class Main {
+    public static void main(String[] args) {
+      marks a=new marks();
+      a.marks();
+      a.id();
+  }
+}
