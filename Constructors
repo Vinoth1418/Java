@@ -1,0 +1,15 @@
+import java.util.*;
+class Student{
+  int marks;
+  String name;
+  Student(int a,String b){
+    marks=a;
+    name=b;
+  }
+}
+public class student{
+public static void main(String args[]){
+  Student c=new Student(10,"Vino");
+  System.out.println(c.marks);
+  System.out.println(c.name);
+}}
