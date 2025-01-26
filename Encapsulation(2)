@@ -1,0 +1,16 @@
+import java.util.*;
+class student{
+  private int marks;
+  public int getmarks(){
+    return marks;
+  }
+  public void setmarks(int a){
+    marks=a;
+  }
+}
+class Stu{
+  public static void main (String args[]){
+    student a=new student();
+    a.setmarks(77);
+    System.out.println(a.getmarks());
+  }}
