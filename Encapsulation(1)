@@ -1,0 +1,17 @@
+import java.util.*;
+class student{
+  private int marks=97;
+  private String name="Vino";
+  public int Getmarks(){
+    return marks;
+  }
+  public String Getname(){
+    return name;
+  }
+}
+class Stu{
+  public static void main (String args[]){
+    student a=new student();
+    System.out.println(a.Getmarks());
+    System.out.println(a.Getname());
+}}
