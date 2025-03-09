@@ -1,0 +1,19 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      int a[]={2,5,9,4,5};
+      int target=24;
+      for(int i=0;i<a.length;i++){
+        int total=0;
+        for(int j=i;j<a.length;j++){
+          total+=a[j];
+          if(total==target){
+            System.out.print((i+1)+" "+(j+1));
+            return;
+          }
+        }
+      }
+      System.out.println("-1");
+  }
+}
