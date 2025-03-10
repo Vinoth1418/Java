@@ -18,3 +18,27 @@ public class Main {
       
   }
 }
+Ex:2
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+      int a[]={10,12,5,40,30,7,5,9,10};
+      int j=0;
+      int n=a.length;
+      int temp[]=new int[a.length];
+      for(int i=0;i<n;i++){
+        if(a[i]%10!=0){
+          temp[j++]=a[i];
+        }
+            }
+        for(int i=0;i<n;i++){
+        if(a[i]%10==0){
+          temp[j++]=a[i];
+        }
+            }
+            for(int i=0;i<n;i++){
+              a[i]=temp[i];
+              System.out.print(a[i]+" ");
+            }
+  }
+}
