@@ -1,0 +1,25 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      int a=19;
+     HashSet<Integer>b=new HashSet<>();
+       while(a!=1&&!b.contains(a)){
+         b.add(a);
+         int sum=0;
+         int temp=a;
+         while(temp>0){
+           int digit=temp%10;
+           sum+=digit*digit;
+           temp=temp/10;
+         }
+         a=sum;
+       }
+     if(a==1){
+       System.out.println("True");
+     }
+     else{
+       System.out.println("False");
+     }
+  }
+}
