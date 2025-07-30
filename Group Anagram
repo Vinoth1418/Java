@@ -1,0 +1,29 @@
+class Solution {
+    public List<List<String>> groupAnagrams(String[] strs) {
+        if(strs==null||strs.length==0){
+            return null;
+        }
+        Map<Integer,List<String>>map=new HashMap<>();
+        int nos[]={2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 
+31, 37, 41, 43, 47, 53, 59, 61, 67, 
+71, 73, 79, 83, 89, 97, 101, 103};
+for(String a:strs){
+    int prod=1;
+    for(int i=0;i<a.length();i++){
+        prod*=nos[a.charAt(i)-'a'];
+    }
+    if(map.containsKey(prod)){
+       map.get(prod).add(a);
+    }
+       else{
+        map.put(prod,new ArrayList<String>());
+        map.get(prod).add(a);
+       }
+    }
+    List<List<String>>res=new ArrayList<List<String>>();
+    for(List<String>b:map.values()){
+        res.add(b);
+    }
+    return res;
+}
+}
