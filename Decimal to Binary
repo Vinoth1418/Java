@@ -1,0 +1,15 @@
+import java.util.*;
+class Main {
+    public static void main(String args[]) {
+        Scanner a = new Scanner(System.in);
+        System.out.println("Enter a number:");
+        int b = a.nextInt();
+        String c=" ";
+        while(b>0){
+            int rem=b%2;
+            c=rem+c;
+            b/=2;
+        }
+        System.out.println(c);
+    }
+}
