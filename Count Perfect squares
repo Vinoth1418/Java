@@ -1,0 +1,16 @@
+import java.util.*;
+class Main {
+    public static void main(String args[]) {
+        Scanner a = new Scanner(System.in);
+        System.out.println("Enter a number:");
+        int b = a.nextInt();
+        int count=0;
+        for(int i=1;i<=b;i++){
+            int c=(int)Math.sqrt(i);
+            if(c*c==i){
+                count++;
+            }
+        }
+        System.out.println(count);
+    }
+}
