@@ -1,0 +1,21 @@
+import java.util.*;
+class Main{
+    public static int[] rev(int arr[],int index){
+        int start=index;
+        int end=arr.length-1;
+        while(start<end){
+            int temp=arr[start];
+            arr[start]=arr[end];
+            arr[end]=temp;
+            start++;
+            end--;
+        }
+        return arr;
+    }
+    public static void main(String args[]){
+        int arr[]={1,2,3,4,5,6};
+        int index=3;
+        int res[]=rev(arr,index);
+        System.out.println(Arrays.toString(res));
+    }
+}
