@@ -1,18 +1,37 @@
-import java.util.*;
-
-public class Main {
-    public static void main(String[] args) {
-    String a="vino";
-    String b="novi";
-    char c[]=a.toCharArray();
-    Arrays.sort(c);
-    char d[]=b.toCharArray();
-    Arrays.sort(d);
-    System.out.println(d);
-    System.out.println(c);
-    if(Arrays.equals(c,d)){
-      System.out.println("Anagram");}
-      else{
-    System.out.println("Not a anagram");
-  }
-}}
+public class Main
+{
+    public static boolean anagram(String a,String b){
+        if(a.length()!=b.length()){
+            return false;
+        }
+        int count[]=new int[26];
+        for(int i=0;i<a.length();i++){
+            char c=a.charAt(i);
+            count[c-'a']++;
+                    }
+                  for(int i=0;i<a.length();i++){
+            char c=a.charAt(i);
+            count[c-'a']--;
+                    }
+                for(int i=0;i<26;i++){
+                    if(count[i]!=0){
+                        return false;
+                    }
+                }
+            return true;
+    }
+        
+	public static void main(String args[]){
+	   String a="vinoth";
+	   String b="inovht";
+	   a=a.toLowerCase();
+	   b=b.toLowerCase();
+	   if(anagram(a,b)){
+	       System.out.println("Anagram");
+	   }
+	   else{
+	       System.out.println("Not a Anagram");
+	   }
+	   
+	}
+	}
