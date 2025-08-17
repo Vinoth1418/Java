@@ -1,0 +1,25 @@
+public class Main
+{
+    public static int[] cnt(String a){
+        
+         int vowels=0;
+         int consonantes=0;
+         for(int i=0;i<a.length();i++){
+             char b=a.charAt(i);
+             if(b=='a'||b=='e'||b=='i'||b=='o'||b=='u'){
+                 vowels++;
+             }
+             else{
+                 consonantes++;
+             }
+         }
+          return new int[]{vowels,consonantes};
+}
+	public static void main(String args[]){
+	   String a="vinoth";
+	   a=a.toLowerCase();
+	   int res[]=cnt(a);
+	    System.out.println("Vowels: " + res[0]);
+        System.out.println("Consonants: " + res[1]);
+	}
+	}
