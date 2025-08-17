@@ -1,0 +1,27 @@
+public class Main
+{
+	public static String rev(String a){
+	    
+	    a=a.replace(" ", "");
+	    String c="";
+	    for(int i=a.length()-1;i>=0;i--){
+	        c=c+a.charAt(i);
+	    }
+	
+	return c;
+	}
+	public static void main(String args[]){
+	    String b="no lemon no melon";
+	    b=b.toLowerCase();
+	    String c=b;
+	    c = c.replace(" ", "");
+	    String res=rev(b);
+	    
+	    if(c.equals(res)){
+	        System.out.println("Palindrome");
+	    }
+	    else{
+	        System.out.println("Not a Palindrome");
+	    }
+	}
+	}
