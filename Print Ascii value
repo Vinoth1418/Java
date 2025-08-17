@@ -1,0 +1,12 @@
+public class Main
+{
+public static int ascii(char a){
+    int b=a;
+   return b;
+}
+	public static void main(String args[]){
+	   char a='H';
+	   int res=ascii(a);
+	   System.out.println(res);
+	}
+	}
