@@ -1,0 +1,47 @@
+import java.sql.SQLOutput;
+import java.util.*;
+class Main {
+    public static void main(String args[]) {
+        int a[][] = {{1, 2, 3},
+                {4, 5, 6},
+                {7, 8, 9}};
+
+
+        int left = a[0].length;
+        int right = a.length;
+        int max = a[0][0];
+        for (int j = 0; j < left; j++) {
+            if (a[0][j] > max) {
+                max = a[0][j];
+
+            }
+        }
+        System.out.println(max);
+        for (int i = 0; i < a[1].length; i++) {
+            if (prime(a[1][i])) {
+                System.out.print(a[1][i] + " ");
+            }
+        }
+        System.out.println();
+        int min = a[right - 1][0];
+        for (int i = 0; i < a[1].length; i++) {
+            if (a[2][i] < min) {
+                min = a[2][i];
+            }
+        }
+        System.out.println(min);
+    }
+        public static boolean prime(int c){
+            if (c< 1)
+                return false;
+
+            for (int i = 2; i <c; i++) {
+                if (c % i == 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+    }
+
