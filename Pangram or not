@@ -1,0 +1,27 @@
+import java.sql.SQLOutput;
+import java.util.*;
+class Main {
+   public static boolean sum(String a) {
+       boolean c[]= new boolean[26];
+       String b = a.toUpperCase();
+       for (int i = 0; i < b.length(); i++) {
+           char ch=b.charAt(i);
+           if (ch >= 'A' && ch <= 'Z'){
+               c[b.charAt(i) - 'A'] = true;
+           }
+       }
+           for (int j = 0; j < 26; j++) {
+               if (!c[j]) {
+                   return false;
+               }
+           }
+       return true;
+   }
+
+    public static void main(String[] args) {
+        String a="Pack my box with five dozen liquor jugs";
+        boolean res=sum(a);
+        System.out.println(res);
+    }
+    }
+
