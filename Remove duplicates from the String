@@ -1,14 +1,29 @@
 import java.util.*;
+class Main{
+    public static String lon(String a){
+        StringBuilder b=new StringBuilder();
+        for(int i=0;i<a.length();i++){
+            char d=a.charAt(i);
+            boolean c=false;
+              for(int j=0;j<b.length();j++){
+                  if(a.charAt(j)==d){
+                      c=true;
+                      break;
+                  }
+              }
+              if(!c){
+                  b.append(d);
+              }
 
-public class Main {
+        }
+        return b.toString();
+
+    }
+
     public static void main(String[] args) {
-      String a="VinoVVVVV";
-      HashSet<Character>b=new HashSet<>();
-      for(int i=0;i<a.length();i++){
-        b.add(a.charAt(i));
-      }
-      for(char c:b){
-      }
-        System.out.println(b);
-      }
-}
+     String b="Developer";
+     String c=lon(b);
+        System.out.println(c);
+
+    }
+    }
