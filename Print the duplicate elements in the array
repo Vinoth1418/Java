@@ -1,18 +1,22 @@
 import java.util.*;
+class Main{
+    public static ArrayList<Integer> lon(int a[]) {
+        ArrayList<Integer>c=new ArrayList<>();
+        for (int i = 0; i < a.length; i++) {
+            for (int j = i + 1; j < a.length; j++) {
+                if (a[i] == a[j]&&!c.contains(a[i])) {
+                    c.add(a[i]);
+                }
+            }
+        }
+       return c;
+    }
 
-public class Main {
+
     public static void main(String[] args) {
-      int a[]={5,3,9,2,6,1,5,9,5};
-     HashSet<Integer>b=new HashSet<>();
-     for(int i=0;i<a.length;i++){
-       for(int j=i+1;j<a.length;j++){
-         if(a[i]==a[j]){
-           if(!b.contains(a[i])){
-             b.add(a[i]);
-             break;
-           }
-         }
-       }
-     }
-     System.out.print("Dupliactes elements are:"+b);
-    }}
+      int a[]={6,2,3,4,5,6,3,6,5};
+       ArrayList<Integer>b=lon(a);
+        System.out.println(b);
+
+    }
+    }
