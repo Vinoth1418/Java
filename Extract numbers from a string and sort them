@@ -1,34 +1,29 @@
 import java.util.*;
 class Main{
-    public static void rev(String a){
-        String d[]=a.split(" ");
-        ArrayList<Integer>e=new ArrayList<>();
-        System.out.println(Arrays.toString(d));
-         for(int i=0;i<d.length;i++){
-             if(i%2==1){
-                 int num=Integer.parseInt(d[i]);
-                 e.add(num);
-             }
-         }
-         int arr[]=new int[e.size()];
-         for(int i=0;i<e.size();i++){
-             arr[i]=e.get(i);
-         }
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = i + 1; j < arr.length; j++) {
-                if (arr[i] > arr[j]) {
-                    int temp = arr[i];
-                    arr[i] = arr[j];
-                    arr[j] = temp;
+    public static void lon(String a) {
+        String c[] = a.split(" ");
+        System.out.println(Arrays.toString(c));
+        ArrayList<Integer>d=new ArrayList<>();
+        for (int i = 0; i < c.length; i++){
+            if(Character.isDigit(c[i].charAt(0)))
+                d.add(Integer.parseInt(c[i]));
+        }
+        int temp;
+        for(int i=0;i<d.size();i++) {
+            for (int j = 0; j < d.size() - 1; j++) {
+                if (d.get(j) > d.get(j + 1)) {
+                    temp = d.get(j);
+                    d.set(j, d.get(j + 1));
+                    d.set(j + 1, temp);
                 }
             }
         }
-        for (int num:arr) {
-            System.out.print(num+" ");
-        }
+        System.out.println(d);
     }
     public static void main(String[] args) {
-        String a="Syncfusion 48 private 456 company 27 limited 82";
-        rev(a);
+        String a = "Syncfusion 48 private 456 company 27 limited 8";
+        lon(a);
     }
-}
+    }
+
+
