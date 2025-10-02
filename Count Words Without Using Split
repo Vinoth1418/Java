@@ -1,0 +1,27 @@
+import java.util.*;
+class Main {
+    public static void lon(String a) {
+           int count=0;
+           boolean b=false;
+           for(int i=0;i<a.length();i++){
+               char c=a.charAt(i);
+               if(c!=' '&& !b){
+                   count++;
+                   b=true;
+               }
+               else if(c==' '){
+                   b=false;
+               }
+           }
+        System.out.println(count);
+        }
+
+
+
+    public static void main(String[] args) {
+        String a = "Java is easy to learn";
+        lon(a);
+    }
+}
+
+
