@@ -1,0 +1,28 @@
+import java.util.*;
+class Main {
+    public static void lon(String a) {
+        boolean c[]=new boolean[256];
+        for(int i=0;i<a.length();i++){
+            char b=a.charAt(i);
+            if(!c[b]) {
+                int count = 0;
+                for (int j = 0; j < a.length(); j++) {
+                    if (b == a.charAt(j)) {
+                        count++;
+                    }
+                }
+                System.out.println(b + "-" + count);
+                c[b] = true;
+            }
+        }
+
+    }
+
+
+    public static void main(String[] args) {
+        String a = "swiss";
+        lon(a);
+    }
+}
+
+
