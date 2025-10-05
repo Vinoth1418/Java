@@ -1,12 +1,22 @@
 import java.util.*;
+class Main {
+    public static void lon(int a[]) {
+        ArrayList<Integer>b=new ArrayList<>();
+          for(int i=0;i<a.length;i++){
+              if(!b.contains(a[i])){
+                  b.add(a[i]);
+              }
+          }
+        System.out.println(b);
+    }
 
-public class Main {
+
+
     public static void main(String[] args) {
-      int a[]={7,8,6,5,7};
-      HashSet<Integer>b=new HashSet<>();
-      for(int i=0;i<a.length;i++){
-        b.add(a[i]);
-      }
-      for(int c:b);
-      System. out. println("After removing:"+b);
-}}
+
+        int a[] = {1, 2, 3, 4, 5,2,3};
+        lon(a);
+    }
+}
+
+
