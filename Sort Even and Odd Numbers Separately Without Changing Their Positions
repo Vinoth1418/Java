@@ -1,0 +1,48 @@
+import java.util.*;
+class array{
+    public static void lon(int a[]){
+        ArrayList<Integer>b=new ArrayList<>();
+        ArrayList<Integer>c=new ArrayList<>();
+        for(int i=0;i<a.length;i++){
+            if(a[i]%2==0){
+                b.add(a[i]);
+            }
+            else{
+                c.add(a[i]);
+            }
+        }
+        for (int i = 0; i <c.size(); i++) {
+            for (int j = i + 1; j < c.size(); j++) {
+                if (c.get(i) > c.get(j)) {
+                    int temp = c.get(j);
+                    c.set(j, c.get(i));
+                    c.set(i, temp);
+                }
+            }
+        }
+        for(int i=-0;i<b.size();i++){
+            for(int j=i+1;j<b.size();j++){
+                if(b.get(i)<b.get(j)){
+                    int temp=b.get(j);
+                    b.set(j,b.get(i));
+                    b.set(i,temp);
+                }
+            }
+        }
+        int e=0;
+        int o=0;
+        for(int i=0;i<a.length;i++){
+            if(i%2==0){
+                a[i]=c.get(e++);
+            }
+            else{
+                a[i]=b.get(o++);
+            }
+        }
+        System.out.println(Arrays.toString(a));
+    }
+    public static void main(String args[]){
+        int a[]={9,4,3,2,7,8,5};
+        lon(a);
+    }
+}
