@@ -1,0 +1,33 @@
+import java.util.*;
+class array{
+    public static void lon(String a) {
+        HashMap<Character, Integer> b = new HashMap<>();
+        for (int i = 0; i < a.length(); i++) {
+            char c = a.charAt(i);
+            if (Character.isDigit(c))
+                b.put(c, i);
+        }
+        HashSet<Character> letters = new HashSet<>();
+        StringBuffer result = new StringBuffer();
+        for (int i = 0; i < a.length(); i++) {
+            char c = a.charAt(i);
+            if (Character.isLetter(c)) {
+                if (!letters.contains(c)) {
+                    letters.add(c);
+                    result.append(c);
+                }
+
+            }
+            else if(Character.isDigit(c)){
+                if(b.get(c)==i){
+                    result.append(c);
+                }
+            }
+        }
+        System.out.println(result);
+    }
+    public static void main(String args[]){
+        String a="a1b2c34c3b2cb3a1d";
+        lon(a);
+    }
+}
