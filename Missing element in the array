@@ -1,15 +1,34 @@
-public class Solution {
-    public static void main(String args[]) {
-        int arr[]={1,2,3,5};
-        int sum = 0;
-        int res;
-        int n = arr.length + 1;
-        int expectedSum = (n * (n + 1)) / 2;
-        for (int i = 0; i < arr.length; i++) {
-            sum += arr[i];
+public class Main {
+    public static void main(String[] args) {
+        int a[] = {1,2};
+        int b[]={3,0,1};
+        int c[]={1,2,3,0};
+        int d[]={};
+        System.out.println(lon(a));
+        System.out.println(lon(b));
+        System.out.println(lon(c));
+        System.out.println(lon(d));
+    }
+
+
+    public static int lon(int a[]) {
+        int max = Integer.MIN_VALUE;
+        int sum1 = 0;
+        int sum2 = 0;
+        if(a.length==0){
+            return 0;
         }
-        res=expectedSum-sum;
-        System.out.println("Missing element is:"+res);
-        
+        for (int i = 0; i < a.length; i++) {
+            if (max < a[i])
+                max = a[i];
+        }
+        for (int i = 0; i < a.length; i++) {
+            sum1 += a[i];
+        }
+        for (int i = 0; i<=a.length; i++) {
+            sum2 += i;
+        }
+        int res=sum2-sum1;
+        return res;
     }
 }
