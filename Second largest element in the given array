@@ -9,6 +9,7 @@ public class Main {
         System.out.println(lon(b));
         System.out.println(lon(c));
         System.out.println(lon(d));
+        System.out.println(lon(e));
     }
     public static int lon(int a[]){
         if(a.length==0||a.length==1){
