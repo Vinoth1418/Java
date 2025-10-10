@@ -2,7 +2,7 @@ public class Main {
     public static void main(String[] args) {
         String a = "aba";
         String b="Aa";
-        String c="ab$cba*";
+        String c="ab$ca*";
         System.out.println("a:"+lon(a.toUpperCase()));
         System.out.println("b:"+lon(b.toUpperCase()));
         System.out.println("c:"+lon(c.toUpperCase()));
@@ -17,6 +17,9 @@ public class Main {
             }
             else if(!Character.isLetter(a.charAt(right))){
                 right--;
+            }
+            if(a.charAt(left)!=a.charAt(right)){
+                return false;
             }
             if(a.charAt(left)==a.charAt(right)){
                 left++;
