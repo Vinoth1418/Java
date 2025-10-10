@@ -1,23 +1,33 @@
-import java.util.*;
-
 public class Main {
     public static void main(String[] args) {
-      int a[]={7,5,6,9,3};
-      int size=a.length-1;
-      int temp;
-      System. out. print("Given array elements:");
-      for(int i=0;i<a.length;i++){
-        for(int j=i+1;j<a.length;j++){
-          if(a[i]>a[j]){
-            temp=a[i];
-            a[i]=a[j];
-            a[j]=temp;
-          }
+        int a[]={4,6,5,1,2};
+        int b[]={5,5,4};
+        int c[]={};
+        int d[]={5,5,5};
+        System.out.println(lon(b));
+        System.out.println(lon(b));
+        System.out.println(lon(c));
+        System.out.println(lon(d));
+    }
+    public static int lon(int a[]){
+        if(a.length==0||a.length==1){
+            return -1;
         }
-        System. out. print(a[i]+" ");
-        
-      }
-      System. out. println();
-      System. out. println("Second largest number :"+a[size-1]);
-  }
+        int largest=Integer.MIN_VALUE;
+        int second=Integer.MIN_VALUE;
+        for(int i=0;i<a.length;i++){
+            if(largest<a[i]){
+                second=largest;
+                largest=a[i];
+            }
+            else if(second<a[i]&&a[i]!=largest){
+                second=a[i];
+            }
+
+        }
+        if(second==Integer.MIN_VALUE)
+            return largest;
+       return second;
+    }
+
 }
