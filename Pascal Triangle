@@ -1,0 +1,35 @@
+import java.util.*;
+class Main{
+    public static List<List<Integer>> lon(int a) {
+         List<List<Integer>>pascal=new ArrayList<>();
+             for (int i = 0; i < a; i++) {
+                 List<Integer> row = new ArrayList<>();
+                 for (int j = 0; j <= i; j++) {
+                     if (j == 0 || j == i) {
+                         row.add(1);
+                     } else {
+                         List<Integer> b = pascal.get(i - 1);
+
+                         row.add(b.get(j) + b.get(j - 1));
+                     }
+                 }
+                 pascal.add(row);
+             }
+                  return pascal;
+
+
+    }
+    public static void main(String args[]){
+        int a=5;
+        List<List<Integer>>b=lon(a);
+        for(int i=0;i<b.size();i++){
+            for(int j=0;j<=b.size()-i;j++){
+                System.out.print(" ");
+            }
+            for(int c:b.get(i)){
+                System.out.print(c+" ");
+            }
+            System.out.println();
+        }
+    }
+}
