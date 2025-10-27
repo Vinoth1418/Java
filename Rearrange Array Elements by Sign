@@ -1,0 +1,30 @@
+import java.util.*;
+class Main {
+    public static int[] sign(int a[]) {
+        ArrayList<Integer>pos=new ArrayList<>();
+        ArrayList<Integer>neg=new ArrayList<>();
+        int res[]=new int[a.length];
+        for(int i=0;i<a.length;i++) {
+            if (a[i] >= 0) {
+                pos.add(a[i]);
+            } else {
+                neg.add(a[i]);
+            }
+        }
+            int p=0;
+            int n=0;
+            int j=0;
+            while(p<pos.size()&&n<neg.size()){
+                res[j++]=pos.get(p++);
+                res[j++]=neg.get(n++);
+            }
+        return res;
+    }
+
+    public static void main(String args[]) {
+        int a[] = {2, 4, 5, -1, -3, -4};
+        int result[]=sign(a);
+        System.out.println("Rearranged Array: " + Arrays.toString(result));
+
+    }
+}
