@@ -1,20 +1,28 @@
 import java.util.*;
-
-public class Main {
-    public static void main(String[] args) {
-      int a=31;
-      boolean b=true;
-      for(int i=2;i<=Math.sqrt(a);i++){
-        if(a%i==0){
-          b=false;
-          break;
-        }
+class Main {
+    public static void sign(int a) {
+       if(a<2){
+           System.out.println("Not a prime");
+       }
+       boolean b=true;
+      for(int i=2;i<a;i++){
+          if(a%i==0){
+              b=false;
+              break;
+          }
       }
-        if(b){
-          System.out.println("True");
-        }
-        else{
-          System.out.println("False");
-        }
-  }
+      if(b){
+          System.out.println("Prime");
+      }
+      else{
+          System.out.println("Not a Prime");
+      }
+    }
+
+    public static void main(String args[]) {
+       int a=31;
+        sign(a);
+
+
+    }
 }
