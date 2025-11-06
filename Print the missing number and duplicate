@@ -1,0 +1,29 @@
+import java.util.*;
+class Main {
+    public static int[] sign(int a[]){
+        int duplicate=-1;
+        int miss=-1;
+         HashSet<Integer>b=new HashSet<>();
+         for(int i:a){
+             if(b.contains(i)){
+                 duplicate=i;
+             }
+             b.add(i);
+         }
+         int total=a.length*(a.length+1)/2;
+         int sum=0;
+        for(int i=0;i<a.length;i++){
+            sum+=a[i];
+        }
+        int res=total-(sum-duplicate);
+   return new int[]{duplicate,res};
+    }
+
+    public static void main(String args[]) {
+     int a[]={3, 5, 4, 1, 1};
+        int res[]=sign(a);
+        System.out.println(res[0]);
+        System.out.println(res[1]);
+
+    }
+}
