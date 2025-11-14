@@ -1,0 +1,33 @@
+import java.util.*;
+class main {
+    public static void check(int a) {
+        int count = 0;
+        int product = 1;
+        int nb = 2;
+        while (count < a) {
+            if (prime(nb)) {
+                product *= nb;
+                count++;
+            }
+            nb++;
+        }
+        System.out.println(product);
+    }
+      public static boolean prime(int num){
+        if(num<2){
+            return false;
+        }
+            for(int i=2;i<num;i++){
+                if(num%i==0){
+                    return false;
+                }
+            }
+            return true;
+        }
+
+
+    public static void main(String[] args) {
+       int n=7;
+       check(n);
+    }
+}
