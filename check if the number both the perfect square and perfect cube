@@ -1,0 +1,30 @@
+import java.util.*;
+class main {
+    public static void check(int a) {
+        boolean b=false;
+        boolean c=false;
+        for(int i=1;i*1<=a;i++){
+            if(i*i==a){
+                b=true;
+            }
+
+        }
+        for(int i=1;i*i*i<=a;i++){
+            if(i*i*i==a){
+                 c=true;
+            }
+        }
+        if(b&&c){
+            System.out.println("Both is square and root");
+        }
+        else{
+            System.out.println("Not");
+        }
+    }
+
+
+    public static void main(String[] args) {
+       int a=64;
+       check(a);
+    }
+}
