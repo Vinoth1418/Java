@@ -1,0 +1,27 @@
+import java.util.*;
+class main {
+    public static void check(String a) {
+        boolean b[]=new boolean[256];
+        int left=0;
+        int right=0;
+        int max=0;
+        while(right<a.length()){
+            char c=a.charAt(right);
+           if(!b[c]){
+              b[c]=true;
+              right++;
+              max=Math.max(max,right-left);
+           }
+           else{
+               b[a.charAt(left)]=false;
+               left++;
+           }
+        }
+        System.out.println(max);
+    }
+
+    public static void main(String[] args) {
+        String a="abcadd";
+        check(a);
+    }
+}
