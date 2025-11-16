@@ -1,43 +1,20 @@
 import java.util.*;
-import java.math.BigInteger;
+class main {
+    public static void check(String a[]) {
+        HashMap<String,List<String>>b=new HashMap<>();
+          for(String s:a){
+              char c[]=s.toCharArray();
+              Arrays.sort(c);
+              String d=new String(c);
+              b.putIfAbsent(d,new ArrayList<>());
+              b.get(d).add(s);
+          }
+        System.out.println(b.values());
 
-class Solution {
-    public static void main(String args[]) {
-        String[] strs = {"eat", "tea", "tan", "ate", "nat", "bat"};
-        
-        if (strs == null || strs.length == 0) {
-            System.out.println("Null");
-            return;
         }
 
-        HashMap<BigInteger, List<String>> map = new HashMap<>();
-
-        int[] nos = {
-            2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 
-            31, 37, 41, 43, 47, 53, 59, 61, 67, 
-            71, 73, 79, 83, 89, 97, 101, 103
-        };
-
-        for (String a : strs) {
-            BigInteger prod = BigInteger.ONE;
-
-            for (int i = 0; i < a.length(); i++) {
-                prod = prod.multiply(BigInteger.valueOf(nos[a.charAt(i) - 'a']));
-            }
-
-            if (map.containsKey(prod)) {
-                map.get(prod).add(a);
-            } else {
-                map.put(prod, new ArrayList<String>());
-                map.get(prod).add(a);
-            }
-        }
-
-        List<List<String>> res = new ArrayList<>();
-        for (List<String> b : map.values()) {
-            res.add(b);
-        }
-
-        System.out.println(res);
+    public static void main(String[] args) {
+        String a[]={"eat","ate","earth","rthae"};
+        check(a);
     }
 }
