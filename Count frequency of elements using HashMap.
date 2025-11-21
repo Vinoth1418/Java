@@ -1,0 +1,20 @@
+import java.util.*;
+class main {
+    public static void check(String a) {
+       HashMap<Character,Integer>b=new HashMap<>();
+       for(int i=0;i<a.length();i++){
+           char c=a.charAt(i);
+           if(!b.containsKey(c)){
+               b.put(c,1);
+           }
+           else{
+               b.put(c,b.get(c)+1);
+           }
+       }
+        System.out.println(b);
+    }
+    public static void main(String[] args) {
+       String a="swiss";
+       check(a);
+    }
+}
