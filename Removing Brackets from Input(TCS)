@@ -1,0 +1,18 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner a=new Scanner(System.in);
+		String b=a.nextLine();
+		b=b.replace("[","").replace("]","");
+		String c[]=b.split(",");
+		ArrayList<Integer>e=new ArrayList<>();
+		for(int i=0;i<c.length;i++){
+		    int f=Integer.parseInt(c[i]);
+		    e.add(f);
+		}
+		for(int i:e){
+		    System.out.println(i);
+		}
+	}
+}
