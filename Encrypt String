@@ -1,0 +1,15 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner a=new Scanner(System.in);
+		String b=a.nextLine();
+		for(int i=0;i<b.length();i++){
+		    char c=b.charAt(i);
+		    int index=c-'a';
+		    int reverse=25-index;
+		    char bc=(char)(reverse+'a');
+		    System.out.print(bc);
+		}
+	}
+}
